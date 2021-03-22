@@ -1,0 +1,19 @@
+//Kun painiketta painetaan selain lähettää lomakkeelle syötetyn arvon palvelimelle
+//palvelin vastaa HTTP-statuskoodilla 302 eli redirectaus ja lataa uudelleen muistiinpanojen sivun
+
+Selain -> palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+        
+    
+//sivunlataus saa aikaan kolme uutta HTTP-pyyntöä
+
+//tyylitiedosto
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+palvelin-->selain: main.css
+
+//JavaScript-koodi
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+palvelin-->selain: main.js
+
+//muistiinpanojen raakadatan lataamisen
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/JSON.js
+palvelin-->selain: data.json

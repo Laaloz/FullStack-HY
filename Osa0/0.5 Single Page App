@@ -1,0 +1,18 @@
+selain -> palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+
+//selain lataa HTML linkit css ja javascript tiedostoihin
+palvelin --> selain: html
+
+selain -> palvelin: https://studies.cs.helsinki.fi/exampleapp/main.css
+
+palvelin --> selain: main.css
+
+selain -> palvelin: https://studies.cs.helsinki.fi/exampleapp/spa.js
+
+palvelin --> selain: spa.js
+//spa.js sisältää JSON muotoista raakadataa ja lisää sivulle muistiinpanojen HTML elementit Dom-apia hyödyntäen
+
+selain -> palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+
+palvelin --> selain: data.json
+//Selain renderöi sivun javascriptillä.
