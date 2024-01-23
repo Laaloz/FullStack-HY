@@ -2,7 +2,6 @@
 //palvelin vastaa HTTP-statuskoodilla 302 eli redirectaus ja lataa uudelleen muistiinpanojen sivun
 
 Selain -> palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
-        
     
 //sivunlataus saa aikaan kolme uutta HTTP-pyyntöä
 
