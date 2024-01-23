@@ -1,3 +1,3 @@
 selain -> palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
 //new_note_spa on muodoltaan POST ja se sisältää JSON muodossa olevat uudet muistiinpanot johon kuuluu sisältö sekä aikaleima
-//palvelin lisää jokakerta uuden huomautuksen devtool taulukkoon
+//palvelin lisää jokakerta uuden huomautuksen consoleen
