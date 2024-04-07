@@ -4,7 +4,7 @@ const H2 = ({ text }) => <h2>{text}</h2>
 
 const Button = ({ handleClick, text }) => <button onClick={handleClick}>{text}</button>
 
-const getRandom = (setSelected, anecdotes, currentSelected) => {
+const getRandom = (setSelected, currentSelected) => {
   // get random index
   let newIndex = currentSelected;
 
@@ -28,7 +28,7 @@ const handleVote = (setVotes, selected, votes) => {
 
 const Vote = ({ votes, selected }) => <p>has {votes[selected]} votes</p>
 
-const MostVotes = ({ votes, anecdotes }) => { 
+const MostVotes = ({ votes }) => { 
   const max = Math.max(...votes)
   const maxIndex = votes.indexOf(max)
 
@@ -55,7 +55,6 @@ const anecdotes = [
   'The only way to go fast, is to go well.'
 ]
   
-  
 const App = () => {
   const [selected, setSelected] = useState(0)
   const [votes, setVotes] = useState(new Array(anecdotes.length).fill(0))
@@ -67,9 +66,9 @@ const App = () => {
       <Vote votes={votes} selected={selected} />
       <br />
       <Button handleClick={() => handleVote(setVotes, selected, votes)} text="vote" />
-      <Button handleClick={() => getRandom(setSelected, anecdotes, selected)} text="next anecdote" />
+      <Button handleClick={() => getRandom(setSelected, selected)} text="next anecdote" />
       <br />
-      <MostVotes votes={votes} anecdotes={anecdotes} />
+      <MostVotes votes={votes} />
     </div>
   )
 }
