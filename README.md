@@ -1,2 +1,2 @@
 # FullStack-HY
- full stack open 2021
+ full stack open 2024
